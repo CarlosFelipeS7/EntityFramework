@@ -2,6 +2,7 @@ using System.Reflection;
 using System.IO;
 using FuscaFilmes.DbContexts;
 using FuscaFilmes.Entities;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,12 @@ using (var db = new FuscaFilmes.DbContexts.Context())
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =>
+{
+    options.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    options.SerializerOptions.WriteIndented = true;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,20 +37,20 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 //criando verbos http 
-app.MapGet("/Diretor", () =>
+app.MapGet("/diretor", () =>
 {
    using var context = new Context(); //using para garantir o descarte do contexto após o uso
-    return context.Diretores.ToList();
+    return context.Diretores.Include(diretor => diretor.Filmes).ToList(); //lambda para incluir os filmes relacionados ao diretor
 });
 
-app.MapPost("/Diretor", (Diretor diretor) => //post é um verbo que eu passo um corpo para ele
+app.MapPost("/diretor", (Diretor diretor) => //post é um verbo que eu passo um corpo para ele
 {
     using var context = new Context();
     context.Add(diretor);
     context.SaveChanges();
 });
 
-app.MapPut("/Diretor/{diretorId}", (int diretorId) =>
+app.MapPut("/diretor/{diretorId}", (int diretorId) =>
 {
 
     using var context = new Context();
@@ -58,7 +65,7 @@ app.MapPut("/Diretor/{diretorId}", (int diretorId) =>
 
 });
 
-app.MapDelete("/Diretor/{diretorId}", (int diretorId) =>
+app.MapDelete("/diretor/{diretorId}", (int diretorId) =>
 {
     using var context = new Context();
     var diretor = context.Diretores.Find(diretorId);
