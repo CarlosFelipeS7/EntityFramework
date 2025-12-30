@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/Diretor": {
+    "/diretor": {
       "get": {
         "tags": [
           "FuscaFilmes"
@@ -47,7 +47,7 @@
         }
       }
     },
-    "/Diretor/{diretorId}": {
+    "/diretor/{diretorId}": {
       "put": {
         "tags": [
           "FuscaFilmes"

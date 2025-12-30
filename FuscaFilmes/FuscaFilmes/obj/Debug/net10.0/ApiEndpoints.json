@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_1",
-    "RelativePath": "Diretor",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "RelativePath": "diretor",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
@@ -19,8 +19,8 @@
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
-    "RelativePath": "Diretor",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
+    "RelativePath": "diretor",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -41,8 +41,8 @@
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
-    "RelativePath": "Diretor/{diretorId}",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_5",
+    "RelativePath": "diretor/{diretorId}",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -63,8 +63,8 @@
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
-    "RelativePath": "Diretor/{diretorId}",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_6",
+    "RelativePath": "diretor/{diretorId}",
     "HttpMethod": "DELETE",
     "IsController": false,
     "Order": 0,

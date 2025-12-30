@@ -6,11 +6,19 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Realizando ensure, ou seja , garantindo que o banco de dados seja criado
+builder.Services.AddDbContext<Context>(options =>
+{
+    var conn = builder.Configuration.GetConnectionString("FuscaFilmesStr");
+    options.UseSqlite(conn);
+});
+
+
+
+/*Realizando ensure, ou seja , garantindo que o banco de dados seja criado
 using (var db = new FuscaFilmes.DbContexts.Context())
 {
     db.Database.EnsureCreated();
-}
+}*/
 
 
 
@@ -37,23 +45,23 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 //criando verbos http 
-app.MapGet("/diretor", () =>
+app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim
 {
-   using var context = new Context(); //using para garantir o descarte do contexto após o uso
+  
     return context.Diretores.Include(diretor => diretor.Filmes).ToList(); //lambda para incluir os filmes relacionados ao diretor
 });
 
-app.MapPost("/diretor", (Diretor diretor) => //post é um verbo que eu passo um corpo para ele
+app.MapPost("/diretor", (Context context, Diretor diretor) => //post é um verbo que eu passo um corpo para ele
 {
-    using var context = new Context();
+
     context.Add(diretor);
     context.SaveChanges();
 });
 
-app.MapPut("/diretor/{diretorId}", (int diretorId) =>
+app.MapPut("/diretor/{diretorId}", (Context context, int diretorId) =>
 {
 
-    using var context = new Context();
+  
     var diretor = context.Diretores.Find(diretorId);
 
     if (diretor != null)
@@ -65,9 +73,9 @@ app.MapPut("/diretor/{diretorId}", (int diretorId) =>
 
 });
 
-app.MapDelete("/diretor/{diretorId}", (int diretorId) =>
+app.MapDelete("/diretor/{diretorId}", (Context context, int diretorId) =>
 {
-    using var context = new Context();
+   
     var diretor = context.Diretores.Find(diretorId);
     if (diretor == null)
     {
