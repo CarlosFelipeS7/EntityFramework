@@ -45,7 +45,17 @@ app.MapPost("/Diretor", (Diretor diretor) => //post é um verbo que eu passo um c
 
 app.MapPut("/Diretor/{diretorId}", (int diretorId) =>
 {
-    
+
+    using var context = new Context();
+    var diretor = context.Diretores.Find(diretorId);
+
+    if (diretor != null)
+    {
+        diretor.Name = "Diretor Atualizado";
+        context.Update(diretor);
+        context.SaveChanges();
+    }
+
 });
 
 app.MapDelete("/Diretor/{diretorId}", (int diretorId) =>
