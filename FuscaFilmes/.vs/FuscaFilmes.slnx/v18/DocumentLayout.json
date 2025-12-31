@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -69,10 +69,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-30T19:08:05.559Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -112,8 +108,7 @@
               "RelativeToolTip": "FuscaFilmes\\Program.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T18:43:15.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T18:43:15.153Z"
             },
             {
               "$type": "Document",
