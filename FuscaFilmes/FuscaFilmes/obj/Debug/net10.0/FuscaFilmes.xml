@@ -4,6 +4,18 @@
         <name>FuscaFilmes</name>
     </assembly>
     <members>
+        <member name="T:FuscaFilmes.Migrations.inicial">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.inicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.inicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.inicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:Program">
             <summary>
             Auto-generated public partial Program class for top-level statement apps.
