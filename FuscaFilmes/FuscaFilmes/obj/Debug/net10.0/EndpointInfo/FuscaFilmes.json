@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/CreateDB": {
+      "get": {
+        "tags": [
+          "FuscaFilmes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/diretor": {
       "get": {
         "tags": [

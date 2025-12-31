@@ -44,6 +44,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
+app.MapGet("/CreateDB", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim
+{
+
+    context.Database.EnsureCreated();
+});
+
+
+
 //criando verbos http 
 app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim
 {
