@@ -98,13 +98,28 @@ app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro
 });
 
 
-app.MapGet("/diretor/{DiretorId}", (int DiretorId,Context context) => 
+app.MapGet("/diretor/agregacao/{DiretorId}", (int DiretorId,Context context) => 
 {
 
     return context.Diretores.Where(diretor => diretor.Id == DiretorId).
 
-    Include(diretor => diretor.Filmes).ToList(); 
+    Include(diretor => diretor.Filmes); 
 });
+
+
+
+
+app.MapGet("/diretor/where/{DiretorId}", (int DiretorId, Context context) =>
+{
+
+    return context.Diretores.Where(diretor => diretor.Id == DiretorId).
+
+    Include(diretor => diretor.Filmes)
+    .OrderBy(diretor => diretor.Name) // Ordena os diretores pelo nome)
+    .FirstOrDefault(); // Retorna o primeiro diretor que corresponde ao ID fornecido ou nulo se não encontrado
+});
+
+
 
 app.MapGet("/filmes", ( Context context) =>
 {
