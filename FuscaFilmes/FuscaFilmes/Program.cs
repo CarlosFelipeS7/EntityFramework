@@ -117,6 +117,18 @@ app.MapGet("/filmes/{id}", (int id, Context context) =>
 });
 
 
+app.MapGet("/filmes/byName/{titulo}", (string titulo, Context context) =>
+{
+    
+    return context.Filmes
+        .Where(filme =>
+            EF.Functions.Like(filme.Titulo, $"%{titulo}%") // Usando EF.Functions.Like para buscar se o título contém a string dada
+        )
+        .Include(filme => filme.Diretor)
+        .ToList();
+});
+
+
 
 app.MapPost("/diretor", (Context context, Diretor diretor) => //post é um verbo que eu passo um corpo para ele
 {
