@@ -106,7 +106,13 @@ app.MapGet("/diretor/{DiretorId}", (int DiretorId,Context context) =>
     Include(diretor => diretor.Filmes).ToList(); 
 });
 
+app.MapGet("/filmes", (int id, Context context) =>
+{
 
+    return context.Filmes.
+    Include(filme => filme.Diretor)
+    .ToList();
+});
 
 app.MapGet("/filmes/{id}", (int id, Context context) => 
 {
@@ -117,12 +123,24 @@ app.MapGet("/filmes/{id}", (int id, Context context) =>
 });
 
 
-app.MapGet("/filmes/byName/{titulo}", (string titulo, Context context) =>
+app.MapGet("/filmesEFFunction/byName/{titulo}", (string titulo, Context context) =>
 {
-    
+
     return context.Filmes
         .Where(filme =>
             EF.Functions.Like(filme.Titulo, $"%{titulo}%") // Usando EF.Functions.Like para buscar se o título contém a string dada
+        )
+        .Include(filme => filme.Diretor)
+        .ToList();
+}); 
+
+
+app.MapGet("/filmesLinQ/byName/{titulo}", (string titulo, Context context) =>
+{
+
+    return context.Filmes
+        .Where(filme =>
+            EF.Functions.Like(filme.Titulo, $"%{titulo}%") 
         )
         .Include(filme => filme.Diretor)
         .ToList();
