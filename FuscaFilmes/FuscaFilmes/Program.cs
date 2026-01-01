@@ -103,7 +103,10 @@ app.MapGet("/diretor/agregacao/{DiretorId}", (int DiretorId,Context context) =>
 
     return context.Diretores.Where(diretor => diretor.Id == DiretorId).
 
-    Include(diretor => diretor.Filmes); 
+    Include(diretor => diretor.Filmes)
+    .Select(diretor=>diretor.Name); // Seleciona apenas o nome do diretor
+
+
 });
 
 
