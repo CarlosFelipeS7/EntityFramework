@@ -106,11 +106,12 @@ app.MapGet("/diretor/{DiretorId}", (int DiretorId,Context context) =>
     Include(diretor => diretor.Filmes).ToList(); 
 });
 
-app.MapGet("/filmes", (int id, Context context) =>
+app.MapGet("/filmes", ( Context context) =>
 {
 
     return context.Filmes.
     Include(filme => filme.Diretor)
+    .OrderBy(filme => filme.Ano) // Ordena os filmes pelo ano de lançamento
     .ToList();
 });
 
