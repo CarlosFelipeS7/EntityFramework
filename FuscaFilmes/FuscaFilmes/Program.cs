@@ -3,6 +3,7 @@ using System.IO;
 using FuscaFilmes.DbContexts;
 using FuscaFilmes.Entities;
 using Microsoft.EntityFrameworkCore;
+using FuscaFilmes.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -188,6 +189,31 @@ app.MapPut("/diretor/{diretorId}", (Context context, int diretorId) =>
     }
 
 });
+
+
+app.MapDelete("/filmes/{filmeId}", (Context context, int filmeId) =>
+{
+    context.Filmes
+    .Where(filme => filme.Id == filmeId)
+    .ExecuteDelete<Filme>();
+
+});
+
+
+app.MapPatch("/filmes", (Context context, FilmeUpdate filmeUpdate) => //patch é usado para atualizações parciais
+{
+    context.Filmes
+    .Where(filme => filme.Id == filmeUpdate.Id)
+    .ExecuteUpdate(setter => setter
+        .SetProperty(f => f.Titulo, filmeUpdate.Titulo)
+        .SetProperty(f => f.Ano, filmeUpdate.Ano)
+        );
+    ;
+
+});
+
+
+
 
 app.MapDelete("/diretor/{diretorId}", (Context context, int diretorId) =>
 {
