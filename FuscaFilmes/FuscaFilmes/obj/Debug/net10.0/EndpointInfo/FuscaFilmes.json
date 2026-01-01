@@ -59,6 +59,72 @@
         }
       }
     },
+    "/diretor/{DiretorId}": {
+      "get": {
+        "tags": [
+          "FuscaFilmes"
+        ],
+        "parameters": [
+          {
+            "name": "DiretorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Diretor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/filmes/{id}": {
+      "get": {
+        "tags": [
+          "FuscaFilmes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Filme"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/diretor/{diretorId}": {
       "put": {
         "tags": [
@@ -139,6 +205,10 @@
             "nullable": true
           },
           "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "diretorId": {
             "type": "integer",
             "format": "int32"
           },

@@ -16,6 +16,18 @@
         <member name="M:FuscaFilmes.Migrations.inicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:FuscaFilmes.Migrations.AdicionarDadosIniciais">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.AdicionarDadosIniciais.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.AdicionarDadosIniciais.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.AdicionarDadosIniciais.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:Program">
             <summary>
             Auto-generated public partial Program class for top-level statement apps.

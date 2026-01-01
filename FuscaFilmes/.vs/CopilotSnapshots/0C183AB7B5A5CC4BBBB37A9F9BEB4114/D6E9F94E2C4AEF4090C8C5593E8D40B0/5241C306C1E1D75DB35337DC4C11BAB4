@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.IO;
 using FuscaFilmes.DbContexts;
 using FuscaFilmes.Entities;
@@ -88,34 +88,13 @@ app.MapGet("/CreateDB", (Context context) => //injetando o contexto via parametr
 
 
 //criando verbos http 
-app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim,
+app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim
 {
   
     return context.Diretores.Include(diretor => diretor.Filmes).ToList(); //lambda para incluir os filmes relacionados ao diretor
 });
 
-
-app.MapGet("/diretor/{DiretorId}", (int DiretorId,Context context) => 
-{
-
-    return context.Diretores.Where(diretor => diretor.Id == DiretorId).
-
-    Include(diretor => diretor.Filmes).ToList(); 
-});
-
-
-
-app.MapGet("/filmes/{id}", (int id, Context context) => 
-{
-
-    return context.Filmes.Where(filme => filme.Id == id).
-
-    Include(filme => filme.Diretor).ToList();
-});
-
-
-
-app.MapPost("/diretor", (Context context, Diretor diretor) => //post � um verbo que eu passo um corpo para ele
+app.MapPost("/diretor", (Context context, Diretor diretor) => //post é um verbo que eu passo um corpo para ele
 {
 
     context.Add(diretor);
