@@ -9,8 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Context>(options =>
 {
     var conn = builder.Configuration.GetConnectionString("FuscaFilmesStr");
-    options.UseSqlite(conn);
+    options.UseSqlite(conn)
+    .LogTo(Console.WriteLine, LogLevel.Information); // Log é o registro de atividades do EF Core
 });
+
+
 
 
 
