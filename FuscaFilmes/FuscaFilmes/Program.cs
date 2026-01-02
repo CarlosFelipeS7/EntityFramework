@@ -4,6 +4,7 @@ using FuscaFilmes.DbContexts;
 using FuscaFilmes.Entities;
 using Microsoft.EntityFrameworkCore;
 using FuscaFilmes.Models;
+using FuscaFilmes.EndpointHandlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -90,142 +91,40 @@ app.MapGet("/CreateDB", (Context context) => //injetando o contexto via parametr
 });
 
 
-
-//criando verbos http 
-app.MapGet("/diretor", (Context context) => //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim,
-{
-  
-    return context.Diretores.Include(diretor => diretor.Filmes).ToList(); //lambda para incluir os filmes relacionados ao diretor
-});
+//criando verbos http/ endpoints
+app.MapGet("/diretor", DiretoresHandlers.GetDiretores);
 
 
-app.MapGet("/diretor/agregacao/{DiretorId}", (int DiretorId,Context context) => 
-{
-
-    return context.Diretores.Where(diretor => diretor.Id == DiretorId).
-
-    Include(diretor => diretor.Filmes)
-    .Select(diretor=>diretor.Name); // Seleciona apenas o nome do diretor
+app.MapGet("/diretor/agregacao/{DiretorId}", DiretoresHandlers.GetDiretorById);
 
 
-});
+app.MapPost("/diretor", DiretoresHandlers.CreateDiretor);
+
+
+app.MapPut("/diretor/{diretorId}", DiretoresHandlers.UpdateDiretor);
+
+
+app.MapDelete("/diretor/{diretorId}", DiretoresHandlers.DeleteDiretor);
 
 
 
 
-app.MapGet("/diretor/where/{DiretorId}", (int DiretorId, Context context) =>
-{
+app.MapGet("/filmes", FilmesHandlers.GetFilmes);
 
-    return context.Diretores.Where(diretor => diretor.Id == DiretorId).
-
-    Include(diretor => diretor.Filmes)
-    .OrderBy(diretor => diretor.Name) // Ordena os diretores pelo nome)
-    .FirstOrDefault(); // Retorna o primeiro diretor que corresponde ao ID fornecido ou nulo se não encontrado
-});
+app.MapGet("/filmes/{id}", FilmesHandlers.GetFilmesById);
 
 
-
-app.MapGet("/filmes", ( Context context) =>
-{
-
-    return context.Filmes.
-    Include(filme => filme.Diretor)
-    .OrderBy(filme => filme.Ano) // Ordena os filmes pelo ano de lançamento
-    .ToList();
-});
-
-app.MapGet("/filmes/{id}", (int id, Context context) => 
-{
-
-    return context.Filmes.Where(filme => filme.Id == id).
-
-    Include(filme => filme.Diretor).ToList();
-});
+app.MapGet("/filmesEFFunction/byName/{titulo}", FilmesHandlers.GetFilmesByNameEFFunction); 
 
 
-app.MapGet("/filmesEFFunction/byName/{titulo}", (string titulo, Context context) =>
-{
-
-    return context.Filmes
-        .Where(filme =>
-            EF.Functions.Like(filme.Titulo, $"%{titulo}%") // Usando EF.Functions.Like para buscar se o título contém a string dada
-        )
-        .Include(filme => filme.Diretor)
-        .ToList();
-}); 
+app.MapGet("/filmesLinQ/byName/{titulo}", FilmesHandlers.GetFilmesByNameLINQ);
 
 
-app.MapGet("/filmesLinQ/byName/{titulo}", (string titulo, Context context) =>
-{
-
-    return context.Filmes
-        .Where(filme =>
-            EF.Functions.Like(filme.Titulo, $"%{titulo}%") 
-        )
-        .Include(filme => filme.Diretor)
-        .ToList();
-});
+app.MapDelete("/filmes/{filmeId}", FilmesHandlers.DeleteFilme);
 
 
+app.MapPatch("/filmes", Fil );
 
-app.MapPost("/diretor", (Context context, Diretor diretor) => //post é um verbo que eu passo um corpo para ele
-{
-
-    context.Add(diretor);
-    context.SaveChanges();
-});
-
-app.MapPut("/diretor/{diretorId}", (Context context, int diretorId) =>
-{
-
-  
-    var diretor = context.Diretores.Find(diretorId);
-
-    if (diretor != null)
-    {
-        diretor.Name = "Diretor Atualizado";
-        context.Update(diretor);
-        context.SaveChanges();
-    }
-
-});
-
-
-app.MapDelete("/filmes/{filmeId}", (Context context, int filmeId) =>
-{
-    context.Filmes
-    .Where(filme => filme.Id == filmeId)
-    .ExecuteDelete<Filme>();
-
-});
-
-
-app.MapPatch("/filmes", (Context context, FilmeUpdate filmeUpdate) => //patch é usado para atualizações parciais
-{
-    context.Filmes
-    .Where(filme => filme.Id == filmeUpdate.Id)
-    .ExecuteUpdate(setter => setter
-        .SetProperty(f => f.Titulo, filmeUpdate.Titulo)
-        .SetProperty(f => f.Ano, filmeUpdate.Ano)
-        );
-    ;
-
-});
-
-
-
-
-app.MapDelete("/diretor/{diretorId}", (Context context, int diretorId) =>
-{
-   
-    var diretor = context.Diretores.Find(diretorId);
-    if (diretor != null)
-    {
-        context.Remove(diretor);
-        context.SaveChanges();
-    }
-
-});
 
 
 app.Run();
