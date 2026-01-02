@@ -123,7 +123,7 @@ app.MapGet("/filmesLinQ/byName/{titulo}", FilmesHandlers.GetFilmesByNameLINQ);
 app.MapDelete("/filmes/{filmeId}", FilmesHandlers.DeleteFilme);
 
 
-app.MapPatch("/filmes", Fil );
+app.MapPatch("/filmes", FilmesHandlers.UpdateFilme );
 
 
 
