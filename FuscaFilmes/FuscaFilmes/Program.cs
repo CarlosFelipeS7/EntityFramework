@@ -5,6 +5,7 @@ using FuscaFilmes.Entities;
 using Microsoft.EntityFrameworkCore;
 using FuscaFilmes.Models;
 using FuscaFilmes.EndpointHandlers;
+using FuscaFilmes.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -91,40 +92,9 @@ app.MapGet("/CreateDB", (Context context) => //injetando o contexto via parametr
 });
 
 
-//criando verbos http/ endpoints
-app.MapGet("/diretor", DiretoresHandlers.GetDiretores);
-
-
-app.MapGet("/diretor/agregacao/{DiretorId}", DiretoresHandlers.GetDiretorById);
-
-
-app.MapPost("/diretor", DiretoresHandlers.CreateDiretor);
-
-
-app.MapPut("/diretor/{diretorId}", DiretoresHandlers.UpdateDiretor);
-
-
-app.MapDelete("/diretor/{diretorId}", DiretoresHandlers.DeleteDiretor);
-
-
-
-
-app.MapGet("/filmes", FilmesHandlers.GetFilmes);
-
-app.MapGet("/filmes/{id}", FilmesHandlers.GetFilmesById);
-
-
-app.MapGet("/filmesEFFunction/byName/{titulo}", FilmesHandlers.GetFilmesByNameEFFunction); 
-
-
-app.MapGet("/filmesLinQ/byName/{titulo}", FilmesHandlers.GetFilmesByNameLINQ);
-
-
-app.MapDelete("/filmes/{filmeId}", FilmesHandlers.DeleteFilme);
-
-
-app.MapPatch("/filmes", FilmesHandlers.UpdateFilme );
-
+// endpoints via metodo de extensao
+app.DiretoresEndpoints();
+app.FilmesEndpoints();
 
 
 app.Run();

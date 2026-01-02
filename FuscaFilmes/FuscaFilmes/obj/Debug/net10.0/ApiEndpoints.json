@@ -16,8 +16,8 @@
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.DiretoresHandlers",
+    "Method": "GetDiretores",
     "RelativePath": "diretor",
     "HttpMethod": "GET",
     "IsController": false,
@@ -34,8 +34,8 @@
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_7",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.DiretoresHandlers",
+    "Method": "CreateDiretor",
     "RelativePath": "diretor",
     "HttpMethod": "POST",
     "IsController": false,
@@ -49,15 +49,17 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "FuscaFilmes.Entities.Diretor",
+        "MediaTypes": [
+          "application/json"
+        ],
         "StatusCode": 200
       }
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_8",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.DiretoresHandlers",
+    "Method": "UpdateDiretor",
     "RelativePath": "diretor/{diretorId}",
     "HttpMethod": "PUT",
     "IsController": false,
@@ -78,8 +80,8 @@
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_9",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.DiretoresHandlers",
+    "Method": "DeleteDiretor",
     "RelativePath": "diretor/{diretorId}",
     "HttpMethod": "DELETE",
     "IsController": false,
@@ -100,9 +102,9 @@
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_5",
-    "RelativePath": "diretor/{DiretorId}",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.DiretoresHandlers",
+    "Method": "GetDiretorById",
+    "RelativePath": "diretor/agregacao/{DiretorId}",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
@@ -115,7 +117,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[FuscaFilmes.Entities.Diretor, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "FuscaFilmes.Entities.Diretor",
         "MediaTypes": [
           "application/json"
         ],
@@ -124,8 +126,70 @@
     ]
   },
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_6",
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "GetFilmes",
+    "RelativePath": "filmes",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "UpdateFilme",
+    "RelativePath": "filmes",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filmeUpdate",
+        "Type": "FuscaFilmes.Models.FilmeUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "DeleteFilme",
+    "RelativePath": "filmes/{filmeId}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filmeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "GetFilmesById",
     "RelativePath": "filmes/{id}",
     "HttpMethod": "GET",
     "IsController": false,
@@ -139,7 +203,55 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "GetFilmesByNameEFFunction",
+    "RelativePath": "filmesEFFunction/byName/{titulo}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FuscaFilmes.EndpointHandlers.FilmesHandlers",
+    "Method": "GetFilmesByNameLINQ",
+    "RelativePath": "filmesLinQ/byName/{titulo}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],

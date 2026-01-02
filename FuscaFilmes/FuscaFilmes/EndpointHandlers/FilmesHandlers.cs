@@ -9,18 +9,18 @@ namespace FuscaFilmes.EndpointHandlers
     public class FilmesHandlers
     {
 
-        public static List<Filme>  GetFilmes(Context context)
+        public static IEnumerable<Filme>  GetFilmes(Context context)
         {
              return context.Filmes.Include(filme => filme.Diretor).OrderBy(filme => filme.Ano).ToList();
         }
 
-        public static List<Filme> GetFilmesById (int id, Context context) 
+        public static IEnumerable<Filme> GetFilmesById (int id, Context context) 
         {
 
         return context.Filmes.Where(filme => filme.Id == id). Include(filme => filme.Diretor).ToList();
     }
 
-        public static List<Filme> GetFilmesByNameEFFunction (string titulo, Context context) 
+        public static IEnumerable<Filme> GetFilmesByNameEFFunction (string titulo, Context context) 
         {
 
             return context.Filmes
@@ -32,7 +32,7 @@ namespace FuscaFilmes.EndpointHandlers
          }
         
 
-        public static List<Filme> GetFilmesByNameLINQ (string titulo, Context context) 
+        public static IEnumerable<Filme> GetFilmesByNameLINQ (string titulo, Context context) 
         {
 
             return context.Filmes
