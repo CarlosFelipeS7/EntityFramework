@@ -30,26 +30,20 @@ namespace FuscaFilmes.EndpointHandlers
         }
 
 
-        public static void UpdateDiretor (Context context, int diretorId)
+        public static void UpdateDiretor (IDiretorRepository diretorRepository, Diretor diretorNovo)
         {
-            var diretor = context.Diretores.Find(diretorId);
 
-            if (diretor != null)
-            {
-                diretor.Name = "Diretor Atualizado";
-                context.Update(diretor);
-                context.SaveChanges();
-                }
+            diretorRepository.Update(diretorNovo);
+
+            diretorRepository.SaveChanges();
+                
 
         }
 
-        public static void DeleteDiretor (Context context, int diretorId)
+        public static void DeleteDiretor (IDiretorRepository diretorRepository, int diretorId)
         {
-            var diretor = context.Diretores.Find(diretorId);
-            if (diretor != null)
-            {
-                context.Diretores.Remove(diretor);
-                context.SaveChanges();
+                diretorRepository.Delete(diretorId);
+            diretorRepository.SaveChanges();
             }
         }
 
@@ -58,7 +52,7 @@ namespace FuscaFilmes.EndpointHandlers
     }
 
 
-}
+
 
 
 

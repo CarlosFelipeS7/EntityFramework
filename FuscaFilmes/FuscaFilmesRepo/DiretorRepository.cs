@@ -7,28 +7,41 @@ using System.Text;
 
 namespace FuscaFilmes.Repo
 {
-    public class DiretorRepository(Context context) : IDiretorRepository
+    public class DiretorRepository(Context _context) : IDiretorRepository
 
      {
-        private readonly Context context = context;
+        private readonly Context Context = _context;
 
         public void Add (Diretor diretor)
         {
-            context.Diretores.Add(diretor);
-            context.SaveChanges();
+            _context.Diretores.Add(diretor);
+            _context.SaveChanges();
             
         }
 
-        public void Delete(int diretorId)
+        public void Delete( int diretorId)
         {
-            throw new NotImplementedException();
+            var diretor = _context.Diretores.Find(diretorId);
+            if (diretor != null)
+            {
+                _context.Diretores.Remove(diretor);
+                _context.SaveChanges();
+            }
         }
 
-      
-        public void Update(Diretor diretor)
+        public void Update(Diretor diretorNovo)
         {
-            throw new NotImplementedException();
+            var diretor = Context.Diretores.Find(diretorNovo.Id);
+
+            if (diretor != null)
+            {
+                diretor.Name = "Diretor Atualizado";
+                Context.Update(diretor);
+                Context.SaveChanges();
+            }
+
         }
+        
 
         public bool SaveChanges()
         {
