@@ -6,6 +6,9 @@ using FuscaFilmes.EndpointHandlers;
 using FuscaFilmes.Extensions;
 using FuscaFilmes.Domain.Entities;
 using FuscaFilmesRepo.Contexts;
+using FuscaFilmes.Repo.Contratos;
+using FuscaFilmes.Repo;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +19,7 @@ builder.Services.AddDbContext<Context>(options =>
     .LogTo(Console.WriteLine, LogLevel.Information); // Log é o registro de atividades do EF Core
 });
 
-
+builder.Services.AddScoped<IDiretorRepository, DiretorRepository>();
 
 
 

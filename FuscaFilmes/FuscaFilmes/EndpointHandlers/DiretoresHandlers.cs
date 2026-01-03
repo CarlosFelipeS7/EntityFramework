@@ -1,4 +1,5 @@
 ﻿using FuscaFilmes.Domain.Entities;
+using FuscaFilmes.Repo.Contratos;
 using FuscaFilmesRepo.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,11 +22,11 @@ namespace FuscaFilmes.EndpointHandlers
             .FirstOrDefault();
         }
 
-        public static Diretor CreateDiretor(Diretor diretor, Context context)
+        public static void CreateDiretor(IDiretorRepository diretorRepository, Diretor diretor)
         {
-            context.Diretores.Add(diretor);
-            context.SaveChanges();
-            return diretor;
+            diretorRepository.Add(diretor);
+            diretorRepository.SaveChanges();
+            
         }
 
 
