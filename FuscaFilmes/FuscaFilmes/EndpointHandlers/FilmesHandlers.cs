@@ -1,6 +1,6 @@
-﻿using FuscaFilmes.DbContexts;
-using FuscaFilmes.Entities;
+﻿using FuscaFilmes.Domain.Entities;
 using FuscaFilmes.Models;
+using FuscaFilmesRepo.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Metrics;
 

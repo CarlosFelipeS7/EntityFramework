@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "FuscaFilmes/1.0.0": {
         "dependencies": {
+          "FuscaFilmes.Domain": "1.0.0",
+          "FuscaFilmes.Repo": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "10.0.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.1",
           "Swashbuckle.AspNetCore": "6.8.0"
@@ -813,6 +815,26 @@
             "fileVersion": "9.0.24.52809"
           }
         }
+      },
+      "FuscaFilmes.Domain/1.0.0": {
+        "runtime": {
+          "FuscaFilmes.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FuscaFilmes.Repo/1.0.0": {
+        "dependencies": {
+          "FuscaFilmes.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.1"
+        },
+        "runtime": {
+          "FuscaFilmes.Repo.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1129,6 +1151,16 @@
       "sha512": "sha512-U9msthvnH2Fsw7xwAvIhNHOdnIjOQTwOc8Vd0oGOsiRcGMGoBFlUD6qtYawRUoQdKH9ysxesZ9juFElt1Jw/7A==",
       "path": "system.windows.extensions/9.0.0",
       "hashPath": "system.windows.extensions.9.0.0.nupkg.sha512"
+    },
+    "FuscaFilmes.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FuscaFilmes.Repo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

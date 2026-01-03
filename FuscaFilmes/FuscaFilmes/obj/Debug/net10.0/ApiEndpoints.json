@@ -25,7 +25,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[FuscaFilmes.Entities.Diretor, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[FuscaFilmes.Domain.Entities.Diretor, FuscaFilmes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -43,13 +43,13 @@
     "Parameters": [
       {
         "Name": "diretor",
-        "Type": "FuscaFilmes.Entities.Diretor",
+        "Type": "FuscaFilmes.Domain.Entities.Diretor",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "FuscaFilmes.Entities.Diretor",
+        "Type": "FuscaFilmes.Domain.Entities.Diretor",
         "MediaTypes": [
           "application/json"
         ],
@@ -117,7 +117,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "FuscaFilmes.Entities.Diretor",
+        "Type": "FuscaFilmes.Domain.Entities.Diretor",
         "MediaTypes": [
           "application/json"
         ],
@@ -135,7 +135,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Domain.Entities.Filme, FuscaFilmes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -203,7 +203,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Domain.Entities.Filme, FuscaFilmes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -227,7 +227,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Domain.Entities.Filme, FuscaFilmes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -251,7 +251,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Entities.Filme, FuscaFilmes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FuscaFilmes.Domain.Entities.Filme, FuscaFilmes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],

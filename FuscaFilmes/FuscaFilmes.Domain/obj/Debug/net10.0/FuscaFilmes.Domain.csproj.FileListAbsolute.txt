@@ -1,0 +1,12 @@
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\bin\Debug\net10.0\FuscaFilmes.Domain.deps.json
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\bin\Debug\net10.0\FuscaFilmes.Domain.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\bin\Debug\net10.0\FuscaFilmes.Domain.pdb
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.AssemblyInfoInputs.cache
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.AssemblyInfo.cs
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.sourcelink.json
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\refint\FuscaFilmes.Domain.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\FuscaFilmes.Domain.pdb
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmes.Domain\obj\Debug\net10.0\ref\FuscaFilmes.Domain.dll

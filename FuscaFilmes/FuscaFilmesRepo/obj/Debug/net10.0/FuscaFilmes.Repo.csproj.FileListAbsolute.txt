@@ -1,0 +1,16 @@
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.csproj.AssemblyReference.cache
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.AssemblyInfoInputs.cache
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.AssemblyInfo.cs
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.csproj.CoreCompileInputs.cache
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.sourcelink.json
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\bin\Debug\net10.0\FuscaFilmes.Repo.deps.json
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\bin\Debug\net10.0\FuscaFilmes.Repo.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\bin\Debug\net10.0\FuscaFilmes.Repo.pdb
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\bin\Debug\net10.0\FuscaFilmes.Domain.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\bin\Debug\net10.0\FuscaFilmes.Domain.pdb
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFil.A750B528.Up2Date
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\refint\FuscaFilmes.Repo.dll
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\FuscaFilmes.Repo.pdb
+C:\Users\ccfel\OneDrive\Meu Computador (Galaxy Book 4)\Documents\GitHub\EntityFramework\FuscaFilmes\FuscaFilmesRepo\obj\Debug\net10.0\ref\FuscaFilmes.Repo.dll

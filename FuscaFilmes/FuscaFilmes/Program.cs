@@ -1,11 +1,11 @@
 using System.Reflection;
 using System.IO;
-using FuscaFilmes.DbContexts;
-using FuscaFilmes.Entities;
 using Microsoft.EntityFrameworkCore;
 using FuscaFilmes.Models;
 using FuscaFilmes.EndpointHandlers;
 using FuscaFilmes.Extensions;
+using FuscaFilmes.Domain.Entities;
+using FuscaFilmesRepo.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

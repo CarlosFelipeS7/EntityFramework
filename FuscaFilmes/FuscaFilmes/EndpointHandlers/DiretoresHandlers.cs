@@ -1,5 +1,5 @@
-﻿using FuscaFilmes.DbContexts;
-using FuscaFilmes.Entities;
+﻿using FuscaFilmes.Domain.Entities;
+using FuscaFilmesRepo.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -58,6 +58,15 @@ namespace FuscaFilmes.EndpointHandlers
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

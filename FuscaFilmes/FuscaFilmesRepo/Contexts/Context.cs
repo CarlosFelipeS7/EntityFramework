@@ -1,7 +1,7 @@
-﻿using FuscaFilmes.Entities;
+﻿using FuscaFilmes.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FuscaFilmes.DbContexts
+namespace FuscaFilmesRepo.Contexts
 {
     public class Context : DbContext
     {
@@ -39,10 +39,6 @@ namespace FuscaFilmes.DbContexts
                 new Filme { Id = 7, Titulo = "Avatar", Ano = 2009, DiretorId = 4 },
                 new Filme { Id = 8, Titulo = "Titanic", Ano = 1997, DiretorId = 4 }
             );
-
-
-
         }
-
     }
 }
