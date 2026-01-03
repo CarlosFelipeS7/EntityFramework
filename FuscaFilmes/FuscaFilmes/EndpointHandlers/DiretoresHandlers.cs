@@ -8,18 +8,15 @@ namespace FuscaFilmes.EndpointHandlers
 {
     public static class DiretoresHandlers
     {
-        public static List<Diretor> GetDiretores(Context context)  //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim,
+        public static List<Diretor> GetDiretores(IDiretorRepository diretorRepository)  //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim,
         {
   
-            return context.Diretores.Include(diretor => diretor.Filmes).ToList(); //lambda para incluir os filmes relacionados ao diretor
+            return  diretorRepository.GetDiretores();   
         }
 
-        public static Diretor GetDiretorById(int DiretorId, Context context)
+        public static Diretor GetDiretorById(int DiretorId, IDiretorRepository diretorRepository)
         {
-            return context.Diretores.Where(diretor => diretor.Id == DiretorId)
-             .Include(diretor => diretor.Filmes)
-            .OrderBy(diretor => diretor.Name)
-            .FirstOrDefault();
+            return diretorRepository.GetDiretorById(DiretorId);
         }
 
         public static void CreateDiretor(IDiretorRepository diretorRepository, Diretor diretor)
