@@ -15,8 +15,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Context>(options =>
 {
     var conn = builder.Configuration.GetConnectionString("FuscaFilmesStr");
-    options.UseSqlite(conn)
-    .LogTo(Console.WriteLine, LogLevel.Information); // Log é o registro de atividades do EF Core
+    options.UseSqlite(conn, b => b.MigrationsAssembly("FuscaFilmes"))
+
+        .LogTo(Console.WriteLine, LogLevel.Information); // Log é o registro de atividades do EF Core
 });
 
 builder.Services.AddScoped<IDiretorRepository, DiretorRepository>();
@@ -62,14 +63,14 @@ using (var scope = app.Services.CreateScope())
 
         var filmes = new List<Filme>
         {
-            new Filme { Id = 1, Titulo = "TinTin", Ano = 2010, DiretorId = 1 },
-            new Filme { Id = 2, Titulo = "Jurassic Park", Ano = 1993, DiretorId = 1 },
-            new Filme { Id = 3, Titulo = "Inception", Ano = 2010, DiretorId = 2 },
-            new Filme { Id = 4, Titulo = "Interstellar", Ano = 2014, DiretorId = 2 },
-            new Filme { Id = 5, Titulo = "Pulp Fiction", Ano = 1994, DiretorId = 3 },
-            new Filme { Id = 6, Titulo = "Kill Bill", Ano = 2003, DiretorId = 3 },
-            new Filme { Id = 7, Titulo = "Avatar", Ano = 2009, DiretorId = 4 },
-            new Filme { Id = 8, Titulo = "Titanic", Ano = 1997, DiretorId = 4 }
+            new Filme { Id = 1, Titulo = "TinTin", Ano = 2010},
+            new Filme { Id = 2, Titulo = "Jurassic Park", Ano = 1993 },
+            new Filme { Id = 3, Titulo = "Inception", Ano = 2010},
+            new Filme { Id = 4, Titulo = "Interstellar", Ano = 2014},
+            new Filme { Id = 5, Titulo = "Pulp Fiction", Ano = 1994 },
+            new Filme { Id = 6, Titulo = "Kill Bill", Ano = 2003},
+            new Filme { Id = 7, Titulo = "Avatar", Ano = 2009},
+            new Filme { Id = 8, Titulo = "Titanic", Ano = 1997 }
         };
 
         ctx.Diretores.AddRange(diretores);

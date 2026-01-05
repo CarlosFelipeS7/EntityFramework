@@ -11,13 +11,13 @@ namespace FuscaFilmes.EndpointHandlers
 
         public static IEnumerable<Filme>  GetFilmes(Context context)
         {
-             return context.Filmes.Include(filme => filme.Diretor).OrderBy(filme => filme.Ano).ToList();
+             return context.Filmes.Include(filme => filme.Diretores).OrderBy(filme => filme.Ano).ToList();
         }
 
         public static IEnumerable<Filme> GetFilmesById (int id, Context context) 
         {
 
-        return context.Filmes.Where(filme => filme.Id == id). Include(filme => filme.Diretor).ToList();
+        return context.Filmes.Where(filme => filme.Id == id). Include(filme => filme.Diretores).ToList();
     }
 
         public static IEnumerable<Filme> GetFilmesByNameEFFunction (string titulo, Context context) 
@@ -27,7 +27,7 @@ namespace FuscaFilmes.EndpointHandlers
                 .Where(filme =>
                     EF.Functions.Like(filme.Titulo, $"%{titulo}%") // Usando EF.Functions.Like para buscar se o título contém a string dada
                 )
-                .Include(filme => filme.Diretor)
+                .Include(filme => filme.Diretores)
                 .ToList();
          }
         
@@ -39,7 +39,7 @@ namespace FuscaFilmes.EndpointHandlers
                 .Where(filme =>
                     EF.Functions.Like(filme.Titulo, $"%{titulo}%") 
                 )
-                .Include(filme => filme.Diretor)
+                .Include(filme => filme.Diretores)
                 .ToList();
          }
 

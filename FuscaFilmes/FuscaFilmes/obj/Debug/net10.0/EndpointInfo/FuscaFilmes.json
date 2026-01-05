@@ -42,14 +42,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Diretor"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -89,17 +82,16 @@
         "tags": [
           "DiretoresHandlers"
         ],
-        "parameters": [
-          {
-            "name": "diretorId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Diretor"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -341,12 +333,12 @@
             "type": "integer",
             "format": "int32"
           },
-          "diretorId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "diretor": {
-            "$ref": "#/components/schemas/Diretor"
+          "diretores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Diretor"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

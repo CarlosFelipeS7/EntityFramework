@@ -49,10 +49,8 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "FuscaFilmes.Domain.Entities.Diretor",
-        "MediaTypes": [
-          "application/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
@@ -66,8 +64,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "diretorId",
-        "Type": "System.Int32",
+        "Name": "diretorNovo",
+        "Type": "FuscaFilmes.Domain.Entities.Diretor",
         "IsRequired": true
       }
     ],

@@ -26,4 +26,8 @@
     <ProjectReference Include="..\FuscaFilmesRepo\FuscaFilmes.Repo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repo\" />
+  </ItemGroup>
+
 </Project>

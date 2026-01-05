@@ -6,6 +6,6 @@ public class Filme
     public string Titulo { get; set; }
     public int Ano { get; set; }
 
-    public int DiretorId { get; set; } // Chave estrangeira para o diretor
-    public Diretor Diretor { get; set; }
+
+    public ICollection<Diretor> Diretores { get; set; }
 }
