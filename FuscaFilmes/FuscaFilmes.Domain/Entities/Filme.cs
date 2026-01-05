@@ -7,5 +7,5 @@ public class Filme
     public int Ano { get; set; }
 
 
-    public ICollection<Diretor> Diretores { get; set; }
+    public ICollection<Diretor> Diretores { get; set; } = null!;
 }
