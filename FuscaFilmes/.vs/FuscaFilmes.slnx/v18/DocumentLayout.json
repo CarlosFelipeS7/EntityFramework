@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwHEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T19:27:55.508Z",
               "EditorCaption": ""
@@ -111,8 +111,7 @@
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20251231191757_inicial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:46.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:46.122Z"
             },
             {
               "$type": "Document",
@@ -124,8 +123,7 @@
               "RelativeToolTip": "FuscaFilmes\\Models\\FilmeUpdate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:41.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:41.414Z"
             },
             {
               "$type": "Document",
@@ -137,8 +135,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Contexts\\Context.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAiwA0AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:58:02.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:58:02.434Z"
             },
             {
               "$type": "Document",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "FuscaFilmes\\Program.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAEEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:56:06.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:56:06.573Z"
             },
             {
               "$type": "Document",
@@ -163,8 +159,7 @@
               "RelativeToolTip": "FuscaFilmes\\EndpointHandlers\\FilmesHandlers.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAmwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T19:03:42.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T19:03:42.805Z"
             },
             {
               "$type": "Document",
@@ -176,8 +171,7 @@
               "RelativeToolTip": "FuscaFilmes\\EndpointHandlers\\DiretoresHandlers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T18:31:02.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T18:31:02.556Z"
             },
             {
               "$type": "Document",
@@ -189,8 +183,7 @@
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20260101190154_AdicionarDadosIniciais.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:46.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:46.876Z"
             },
             {
               "$type": "Document",
@@ -202,8 +195,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Contratos\\IDiretorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:24:56.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:24:56.154Z"
             },
             {
               "$type": "Document",
@@ -215,8 +207,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Migrations\\ContextModelSnapshot.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:19:44.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:19:44.073Z"
             },
             {
               "$type": "Document",
@@ -228,21 +219,19 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Migrations\\20260103211253_InitialCreation.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:19:33.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:19:33.314Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "FuscaFilmes.Repo",
+              "Title": "FuscaFilmes.Repo.csproj",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeDocumentMoniker": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeToolTip": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T19:10:23.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:10:23.864Z"
             },
             {
               "$type": "Document",
@@ -254,8 +243,7 @@
               "RelativeToolTip": "FuscaFilmes.Domain\\Entities\\Filme.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:59:25.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:59:25.366Z"
             },
             {
               "$type": "Document",
@@ -267,8 +255,7 @@
               "RelativeToolTip": "FuscaFilmes.Domain\\Entities\\Diretor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:58:24.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:58:24.037Z"
             },
             {
               "$type": "Document",
@@ -280,8 +267,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\DiretorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T20:28:37.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T20:28:37.49Z"
             },
             {
               "$type": "Document",
@@ -292,8 +278,7 @@
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeToolTip": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T19:10:31.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:10:31.9Z"
             }
           ]
         }

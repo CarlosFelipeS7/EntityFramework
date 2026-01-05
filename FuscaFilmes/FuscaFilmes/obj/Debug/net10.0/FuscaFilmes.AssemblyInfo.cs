@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FuscaFilmes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12b5b8e956b69a5db27b751f42e1b7558e526c5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+374ed923084b2a4b40d16686830cc80272164338")]
 [assembly: System.Reflection.AssemblyProductAttribute("FuscaFilmes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FuscaFilmes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

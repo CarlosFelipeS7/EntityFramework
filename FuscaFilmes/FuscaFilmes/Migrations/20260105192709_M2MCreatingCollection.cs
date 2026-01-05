@@ -12,19 +12,7 @@ namespace FuscaFilmes.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Filmes_Diretores_DiretorId",
-                table: "Filmes");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Filmes_DiretorId",
-                table: "Filmes");
-
-            migrationBuilder.DropColumn(
-                name: "DiretorId",
-                table: "Filmes");
-
-            migrationBuilder.CreateTable(
+             migrationBuilder.CreateTable(
                 name: "DiretorFilme",
                 columns: table => new
                 {
@@ -78,11 +66,55 @@ namespace FuscaFilmes.Migrations
                 name: "IX_DiretorFilme_FilmesId",
                 table: "DiretorFilme",
                 column: "FilmesId");
+
+            migrationBuilder.CreateIndex(
+               name: "IX_DiretorFilme_DiretoresId",
+               table: "DiretorFilme",
+               column: "DiretoresId");
+
+            migrationBuilder.Sql(@"
+                INSERT INTO DiretorFilme (FilmesId, DiretoresId) ;
+                SELECT Id, DiretorId FROM Filmes WHERE DiretorId is not null"
+            );
+
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Filmes_Diretores_DiretorId",
+                table: "Filmes");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Filmes_DiretorId",
+                table: "Filmes");
+
+            migrationBuilder.DropColumn(
+                name: "DiretorId",
+                table: "Filmes");
+
+
         }
+
+
+
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<int>(
+             name: "DiretorId",
+             table: "Filmes",
+             type: "INTEGER",
+             nullable: false,
+             defaultValue: 0);
+
+            migrationBuilder.Sql(@"
+                UPDATE Filme
+             SET DiretorId = DF.DiretorId   
+            FROM Filmes F
+            JOIN DiretorFilme DF ON F.Id = DF.FilmesId
+            WHERE DF.DiretoresId IS NOT NULL"
+           );
+
+
             migrationBuilder.DropTable(
                 name: "DiretorFilme");
 
@@ -146,12 +178,7 @@ namespace FuscaFilmes.Migrations
                 keyColumn: "Id",
                 keyValue: 8);
 
-            migrationBuilder.AddColumn<int>(
-                name: "DiretorId",
-                table: "Filmes",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: 0);
+         
 
             migrationBuilder.CreateIndex(
                 name: "IX_Filmes_DiretorId",
