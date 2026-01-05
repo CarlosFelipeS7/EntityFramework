@@ -39,6 +39,24 @@ namespace FuscaFilmesRepo.Contexts
                 new Filme { Id = 7, Titulo = "Avatar", Ano = 2009},
                 new Filme { Id = 8, Titulo = "Titanic", Ano = 1997 }
             );
+
+
+            modelBuilder.Entity("DiretorFilme").HasData(
+               new { DiretoresId = 1, FilmesId = 1 },
+               new { DiretoresId = 1, FilmesId = 2 },
+               new { DiretoresId = 2, FilmesId = 3 },
+               new { DiretoresId = 2, FilmesId = 4 },
+               new { DiretoresId = 3, FilmesId = 5 },
+               new { DiretoresId = 3, FilmesId = 6 },
+               new { DiretoresId = 4, FilmesId = 7 },
+                 new { DiretoresId = 4, FilmesId = 8 }
+   );
+
         }
+    
+   
+
+
     }
+
 }

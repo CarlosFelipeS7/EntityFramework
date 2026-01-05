@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FuscaFilmes.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+374ed923084b2a4b40d16686830cc80272164338")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07d0cef8efddb6d0c29da15bde5afb058b3ad73d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FuscaFilmes.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FuscaFilmes.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

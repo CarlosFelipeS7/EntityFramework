@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|c:\\users\\ccfel\\onedrive\\meu computador (galaxy book 4)\\documents\\github\\entityframework\\fuscafilmes\\fuscafilmesrepo\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|solutionrelative:fuscafilmesrepo\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6BD9917-F218-F4D9-C3BA-E0D3A54BE86D}|FuscaFilmes\\FuscaFilmes.csproj|c:\\users\\ccfel\\onedrive\\meu computador (galaxy book 4)\\documents\\github\\entityframework\\fuscafilmes\\fuscafilmes\\migrations\\20260105192709_m2mcreatingcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6BD9917-F218-F4D9-C3BA-E0D3A54BE86D}|FuscaFilmes\\FuscaFilmes.csproj|solutionrelative:fuscafilmes\\migrations\\20260105192709_m2mcreatingcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|solutionrelative:fuscafilmesrepo\\fuscafilmes.repo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|c:\\users\\ccfel\\onedrive\\meu computador (galaxy book 4)\\documents\\github\\entityframework\\fuscafilmes\\fuscafilmesrepo\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|solutionrelative:fuscafilmesrepo\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|c:\\users\\ccfel\\onedrive\\meu computador (galaxy book 4)\\documents\\github\\entityframework\\fuscafilmes\\fuscafilmesrepo\\contratos\\idiretorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{948669FC-6083-4A3F-B459-A73C400873EC}|FuscaFilmesRepo\\FuscaFilmes.Repo.csproj|solutionrelative:fuscafilmesrepo\\contratos\\idiretorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,20 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "20260105192709_M2MCreatingCollection.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20260105192709_M2MCreatingCollection.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwHEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T19:27:55.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20251231191757_inicial.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Migrations\\20251231191757_inicial.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\Migrations\\20251231191757_inicial.cs",
@@ -111,12 +111,11 @@
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20251231191757_inicial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:46.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:46.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FilmeUpdate.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Models\\FilmeUpdate.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\Models\\FilmeUpdate.cs",
@@ -124,25 +123,24 @@
               "RelativeToolTip": "FuscaFilmes\\Models\\FilmeUpdate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:41.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:41.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\Contexts\\Context.cs",
               "RelativeDocumentMoniker": "FuscaFilmesRepo\\Contexts\\Context.cs",
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\Contexts\\Context.cs",
               "RelativeToolTip": "FuscaFilmesRepo\\Contexts\\Context.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwA0AAABbAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwDMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-03T19:58:02.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Program.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\Program.cs",
@@ -150,12 +148,11 @@
               "RelativeToolTip": "FuscaFilmes\\Program.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAEEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:56:06.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:56:06.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FilmesHandlers.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\EndpointHandlers\\FilmesHandlers.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\EndpointHandlers\\FilmesHandlers.cs",
@@ -163,12 +160,11 @@
               "RelativeToolTip": "FuscaFilmes\\EndpointHandlers\\FilmesHandlers.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAmwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T19:03:42.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T19:03:42.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DiretoresHandlers.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\EndpointHandlers\\DiretoresHandlers.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\EndpointHandlers\\DiretoresHandlers.cs",
@@ -176,12 +172,11 @@
               "RelativeToolTip": "FuscaFilmes\\EndpointHandlers\\DiretoresHandlers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T18:31:02.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T18:31:02.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "20260101190154_AdicionarDadosIniciais.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes\\Migrations\\20260101190154_AdicionarDadosIniciais.cs",
               "RelativeDocumentMoniker": "FuscaFilmes\\Migrations\\20260101190154_AdicionarDadosIniciais.cs",
@@ -189,8 +184,7 @@
               "RelativeToolTip": "FuscaFilmes\\Migrations\\20260101190154_AdicionarDadosIniciais.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:46.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:46.876Z"
             },
             {
               "$type": "Document",
@@ -202,8 +196,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Contratos\\IDiretorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:24:56.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:24:56.154Z"
             },
             {
               "$type": "Document",
@@ -215,8 +208,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Migrations\\ContextModelSnapshot.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:19:44.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:19:44.073Z"
             },
             {
               "$type": "Document",
@@ -228,25 +220,23 @@
               "RelativeToolTip": "FuscaFilmesRepo\\Migrations\\20260103211253_InitialCreation.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:19:33.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:19:33.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FuscaFilmes.Repo",
+              "DocumentIndex": 10,
+              "Title": "FuscaFilmes.Repo.csproj",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeDocumentMoniker": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeToolTip": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T19:10:23.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:10:23.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Filme.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes.Domain\\Entities\\Filme.cs",
               "RelativeDocumentMoniker": "FuscaFilmes.Domain\\Entities\\Filme.cs",
@@ -254,12 +244,11 @@
               "RelativeToolTip": "FuscaFilmes.Domain\\Entities\\Filme.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:59:25.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:59:25.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Diretor.cs",
               "DocumentMoniker": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmes.Domain\\Entities\\Diretor.cs",
               "RelativeDocumentMoniker": "FuscaFilmes.Domain\\Entities\\Diretor.cs",
@@ -267,8 +256,7 @@
               "RelativeToolTip": "FuscaFilmes.Domain\\Entities\\Diretor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:58:24.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:58:24.037Z"
             },
             {
               "$type": "Document",
@@ -280,8 +268,7 @@
               "RelativeToolTip": "FuscaFilmesRepo\\DiretorRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T20:28:37.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T20:28:37.49Z"
             },
             {
               "$type": "Document",
@@ -292,8 +279,7 @@
               "ToolTip": "C:\\Users\\ccfel\\OneDrive\\Meu Computador (Galaxy Book 4)\\Documents\\GitHub\\EntityFramework\\FuscaFilmes\\FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "RelativeToolTip": "FuscaFilmesRepo\\FuscaFilmes.Repo.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T19:10:31.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:10:31.9Z"
             }
           ]
         }
