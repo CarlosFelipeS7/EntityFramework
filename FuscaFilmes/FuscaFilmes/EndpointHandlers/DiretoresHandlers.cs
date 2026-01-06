@@ -11,18 +11,18 @@ namespace FuscaFilmes.EndpointHandlers
         public static List<Diretor> GetDiretores(IDiretorRepository diretorRepository)  //injetando o contexto via parametro, ou seja ele ja cria o contexto para mim,
         {
   
-            return  diretorRepository.GetDiretores();   
+            return  diretorRepository.GetDiretoresAsync();   
         }
 
         public static Diretor GetDiretorById(int DiretorId, IDiretorRepository diretorRepository)
         {
-            return diretorRepository.GetDiretorById(DiretorId);
+            return diretorRepository.GetDiretorByIdAsync(DiretorId);
         }
 
         public static void CreateDiretor(IDiretorRepository diretorRepository, Diretor diretor)
         {
-            diretorRepository.Add(diretor);
-            diretorRepository.SaveChanges();
+            diretorRepository.AddAsync(diretor);
+            diretorRepository.SaveChangesAsync();
             
         }
 
@@ -30,17 +30,17 @@ namespace FuscaFilmes.EndpointHandlers
         public static void UpdateDiretor (IDiretorRepository diretorRepository, Diretor diretorNovo)
         {
 
-            diretorRepository.Update(diretorNovo);
+            diretorRepository.UpdateAsync(diretorNovo);
 
-            diretorRepository.SaveChanges();
+            diretorRepository.SaveChangesAsync();
                 
 
         }
 
         public static void DeleteDiretor (IDiretorRepository diretorRepository, int diretorId)
         {
-                diretorRepository.Delete(diretorId);
-            diretorRepository.SaveChanges();
+                diretorRepository.DeleteAsync(diretorId);
+            diretorRepository.SaveChangesAsync();
             }
         }
 

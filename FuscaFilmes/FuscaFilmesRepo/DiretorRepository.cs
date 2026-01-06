@@ -16,31 +16,31 @@ namespace FuscaFilmes.Repo
             _context = context;
         }
 
-        public Diretor GetDiretorById(int diretorId)
+        public async Task<Diretor> GetDiretorByIdAsync(int diretorId)
         {
-            return _context.Diretores
+            return await _context.Diretores
                 .Where(d => d.Id == diretorId)
                 .Include(d => d.Filmes)
                 .OrderBy(d => d.Name)
-                .FirstOrDefault();
+                .FirstOrDefaultAsync();
         }
 
-        public List<Diretor> GetDiretores()
+        public async Task<List<Diretor>> GetDiretoresAsync()
         {
-            return _context.Diretores
+            return await _context.Diretores
                 .Include(d => d.Filmes)
-                .ToList();
+                .ToListAsync();
         }
 
-        public void Add(Diretor diretor)
+        public async Task AddAsync(Diretor diretor)
         {
-            _context.Diretores.Add(diretor);
-            _context.SaveChanges();
+           await _context.Diretores.AddAsync(diretor);
+           
         }
 
-        public void Delete(int diretorId)
+        public async Task DeleteAsync(int diretorId)
         {
-            var diretor = _context.Diretores.Find(diretorId);
+            var diretor = await _context.Diretores.FindAsync(diretorId);
 
             if (diretor != null)
             {
@@ -49,9 +49,9 @@ namespace FuscaFilmes.Repo
             }
         }
 
-        public void Update(Diretor diretorNovo)
+        public async Task UpdateAsync(Diretor diretorNovo)
         {
-            var diretor = _context.Diretores.Find(diretorNovo.Id);
+            var diretor = await _context.Diretores.FindAsync(diretorNovo.Id);
 
             if (diretor != null)
             {
@@ -61,9 +61,9 @@ namespace FuscaFilmes.Repo
             }
         }
 
-        public bool SaveChanges()
+        public async Task<bool> SaveChangesAsync()
         {
-            return _context.SaveChanges() > 0;
+            return (await _context.SaveChangesAsync()) > 0;
         }
     }
 }
