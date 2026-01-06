@@ -1,5 +1,5 @@
 ﻿using FuscaFilmes.Domain.Entities;
-using FuscaFilmesRepo.Contexts;
+using FuscaFilmes.Repo.Contexts;
 using System;
 
 namespace FuscaFilmes.Repo.Contratos;

@@ -40,6 +40,18 @@
         <member name="M:FuscaFilmes.Migrations.M2MCreatingCollection.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:FuscaFilmes.Migrations.M2MCreateSeeds">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.M2MCreateSeeds.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.M2MCreateSeeds.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FuscaFilmes.Migrations.M2MCreateSeeds.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:Program">
             <summary>
             Auto-generated public partial Program class for top-level statement apps.

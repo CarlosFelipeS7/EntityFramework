@@ -5,7 +5,7 @@ using FuscaFilmes.Models;
 using FuscaFilmes.EndpointHandlers;
 using FuscaFilmes.Extensions;
 using FuscaFilmes.Domain.Entities;
-using FuscaFilmesRepo.Contexts;
+using FuscaFilmes.Repo.Contexts;
 using FuscaFilmes.Repo.Contratos;
 using FuscaFilmes.Repo;
 

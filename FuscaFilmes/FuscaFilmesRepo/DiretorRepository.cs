@@ -1,43 +1,47 @@
 ﻿using FuscaFilmes.Domain.Entities;
 using FuscaFilmes.Repo.Contratos;
-using FuscaFilmesRepo.Contexts;
+using FuscaFilmes.Repo.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace FuscaFilmes.Repo
 {
-    public class DiretorRepository(Context _context) : IDiretorRepository
+    public class DiretorRepository : IDiretorRepository
+    {
+        private readonly Context _context;
 
-     {
-        private readonly Context Context = _context;
-
-
-        public Diretor GetDiretorById(int DiretorId)
+        public DiretorRepository(Context context)
         {
-            return Context.Diretores.Where(diretor => diretor.Id == DiretorId)
-              .Include(diretor => diretor.Filmes)
-             .OrderBy(diretor => diretor.Name)
-             .FirstOrDefault();
+            _context = context;
+        }
+
+        public Diretor GetDiretorById(int diretorId)
+        {
+            return _context.Diretores
+                .Where(d => d.Id == diretorId)
+                .Include(d => d.Filmes)
+                .OrderBy(d => d.Name)
+                .FirstOrDefault();
         }
 
         public List<Diretor> GetDiretores()
         {
-          return  Context.Diretores.Include(diretor => diretor.Filmes).ToList();
+            return _context.Diretores
+                .Include(d => d.Filmes)
+                .ToList();
         }
 
-
-        public void Add (Diretor diretor)
+        public void Add(Diretor diretor)
         {
             _context.Diretores.Add(diretor);
             _context.SaveChanges();
-            
         }
 
-        public void Delete( int diretorId)
+        public void Delete(int diretorId)
         {
             var diretor = _context.Diretores.Find(diretorId);
+
             if (diretor != null)
             {
                 _context.Diretores.Remove(diretor);
@@ -47,23 +51,19 @@ namespace FuscaFilmes.Repo
 
         public void Update(Diretor diretorNovo)
         {
-            var diretor = Context.Diretores.Find(diretorNovo.Id);
+            var diretor = _context.Diretores.Find(diretorNovo.Id);
 
             if (diretor != null)
             {
-                diretor.Name = "Diretor Atualizado";
-                Context.Update(diretor);
-                Context.SaveChanges();
+                diretor.Name = diretorNovo.Name;
+                _context.Update(diretor);
+                _context.SaveChanges();
             }
-
         }
-        
 
         public bool SaveChanges()
         {
-            return true;
+            return _context.SaveChanges() > 0;
         }
-
-        
     }
 }

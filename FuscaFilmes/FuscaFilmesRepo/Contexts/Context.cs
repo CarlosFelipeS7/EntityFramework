@@ -1,7 +1,8 @@
 ﻿using FuscaFilmes.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FuscaFilmesRepo.Contexts
+namespace FuscaFilmes.Repo.Contexts
+
 {
     public class Context : DbContext
     {
@@ -13,13 +14,27 @@ namespace FuscaFilmesRepo.Contexts
         public DbSet<Filme> Filmes { get; set; } // colecao de objetos do tipo filme
         public DbSet<Diretor> Diretores { get; set; } // colecao de objetos do tipo diretor
 
+        public DbSet<DiretorFilme> DiretoresFilmes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) //serve para configurar o modelo de dados, simplificando a criação do banco de dados
         {
-          /*  modelBuilder.Entity<Diretor>()
-                .HasMany(e => e.Filmes) // Um filme tem um diretor
-                .WithOne(e => e.Diretor) // Um diretor pode ter muitos filmes
-                .HasForeignKey(e => e.DiretorId); // Chave estrangeira no filme
-          */
+
+            modelBuilder.Entity<Diretor>()
+                .HasMany(d => d.Filmes) 
+                .WithMany(f => f.Diretores) 
+                .UsingEntity<DiretorFilme>(
+                    df => df.HasOne(e => e.Filme)
+                        .WithMany(e => e.DiretoresFilmes),
+                    df => df
+                        .HasOne(e => e.Diretor)
+                        .WithMany(e => e.DiretoresFilmes)
+                   
+                 
+                 
+                );
+
+      
+
 
             //Insert de dados iniciais
             modelBuilder.Entity<Diretor>().HasData(
@@ -41,15 +56,15 @@ namespace FuscaFilmesRepo.Contexts
             );
 
 
-            modelBuilder.Entity("DiretorFilme").HasData(
-               new { DiretoresId = 1, FilmesId = 1 },
-               new { DiretoresId = 1, FilmesId = 2 },
-               new { DiretoresId = 2, FilmesId = 3 },
-               new { DiretoresId = 2, FilmesId = 4 },
-               new { DiretoresId = 3, FilmesId = 5 },
-               new { DiretoresId = 3, FilmesId = 6 },
-               new { DiretoresId = 4, FilmesId = 7 },
-                 new { DiretoresId = 4, FilmesId = 8 }
+            modelBuilder.Entity<DiretorFilme>().HasData(
+               new { DiretorId = 1, FilmeId = 1 },
+               new { DiretorId = 1, FilmeId = 2 },
+               new { DiretorId = 2, FilmeId = 3 },
+               new { DiretorId = 2, FilmeId = 4 },
+               new { DiretorId = 3, FilmeId = 5 },
+               new { DiretorId = 3, FilmeId = 6 },
+               new { DiretorId = 4, FilmeId = 7 },
+                 new { DiretorId = 4, FilmeId = 8 }
    );
 
         }

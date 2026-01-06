@@ -7,5 +7,8 @@ public class Filme
     public int Ano { get; set; }
 
 
-    public ICollection<Diretor> Diretores { get; set; } = null!;
+    public ICollection<Diretor> Diretores { get; set; }  = new List<Diretor>();
+
+
+    public ICollection<DiretorFilme> DiretoresFilmes { get; set; } = new List<DiretorFilme>();
 }
