@@ -9,45 +9,45 @@ namespace FuscaFilmes.EndpointHandlers
     public class FilmesHandlers
     {
 
-        public static IEnumerable<Filme>  GetFilmes(Context context)
+        public static async Task<IEnumerable<Filme>> GetFilmes(Context context)  //assync task diz que é uma operação assíncrona 
         {
-             return context.Filmes.Include(filme => filme.Diretores).OrderBy(filme => filme.Ano).ToList();
+             return await context.Filmes.Include(filme => filme.Diretores).OrderBy(filme => filme.Ano).ToListAsync();  //await espera a operação assíncrona ser concluída antes de continuar
         }
 
-        public static IEnumerable<Filme> GetFilmesById (int id, Context context) 
+        public static async Task<IEnumerable<Filme>> GetFilmesById (int id, Context context) 
         {
 
-        return context.Filmes.Where(filme => filme.Id == id). Include(filme => filme.Diretores).ToList();
+        return await context.Filmes.Where(filme => filme.Id == id). Include(filme => filme.Diretores).ToListAsync();
     }
 
-        public static IEnumerable<Filme> GetFilmesByNameEFFunction (string titulo, Context context) 
+        public static async Task<IEnumerable<Filme>> GetFilmesByNameEFFunctionAsync (string titulo, Context context) 
         {
 
-            return context.Filmes
+            return await context.Filmes
                 .Where(filme =>
                     EF.Functions.Like(filme.Titulo, $"%{titulo}%") // Usando EF.Functions.Like para buscar se o título contém a string dada
                 )
                 .Include(filme => filme.Diretores)
-                .ToList();
+                .ToListAsync();
          }
         
 
-        public static IEnumerable<Filme> GetFilmesByNameLINQ (string titulo, Context context) 
+        public static async Task<IEnumerable<Filme>> GetFilmesByNameLINQAsync (string titulo, Context context) 
         {
 
-            return context.Filmes
+            return await context.Filmes
                 .Where(filme =>
                     EF.Functions.Like(filme.Titulo, $"%{titulo}%") 
                 )
                 .Include(filme => filme.Diretores)
-                .ToList();
+                .ToListAsync();
          }
 
-        public static void DeleteFilme (Context context, int filmeId) 
+        public static async Task DeleteFilmeAsync (Context context, int filmeId) 
         {
-            context.Filmes
+           await context.Filmes
             .Where(filme => filme.Id == filmeId)
-            .ExecuteDelete<Filme>();
+            .ExecuteDeleteAsync<Filme>();
 
         }
 
