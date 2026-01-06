@@ -16,7 +16,7 @@ namespace FuscaFilmes.Repo
             _context = context;
         }
 
-        public async Task<Diretor> GetDiretorByIdAsync(int diretorId)
+       public async Task<Diretor> GetDiretorByIdAsync(int diretorId)
         {
             return await _context.Diretores
                 .Where(d => d.Id == diretorId)
@@ -65,5 +65,8 @@ namespace FuscaFilmes.Repo
         {
             return (await _context.SaveChangesAsync()) > 0;
         }
+
+    
+    
     }
 }

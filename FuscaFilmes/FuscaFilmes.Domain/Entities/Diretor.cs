@@ -9,7 +9,7 @@ namespace FuscaFilmes.Domain.Entities;
 
     public ICollection<DiretorFilme> DiretoresFilmes { get; set; } = new List<DiretorFilme>();
 
-    public DiretorDetalhe DiretorDetalhe { get; set; }
+
 
 }
 

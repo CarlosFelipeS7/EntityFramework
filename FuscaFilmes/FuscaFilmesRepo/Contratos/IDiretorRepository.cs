@@ -4,19 +4,15 @@ using System;
 
 namespace FuscaFilmes.Repo.Contratos;
 
+
 public interface IDiretorRepository
 {
+    Task<Diretor?> GetDiretorByIdAsync(int id);
+    Task<List<Diretor>> GetDiretoresAsync();
 
-   Diretor GetDiretorByIdAsync(int DiretorId);
+    Task AddAsync(Diretor diretor);
+    Task UpdateAsync(Diretor diretor);
+    Task DeleteAsync(int id);
 
-     List<Diretor> GetDiretoresAsync();
-
-    void AddAsync(Diretor diretor);
-
-    void UpdateAsync(Diretor diretor);
-
-    void DeleteAsync(int diretorId);
-
-    bool SaveChangesAsync(); 
-
+    Task<bool> SaveChangesAsync();
 }
