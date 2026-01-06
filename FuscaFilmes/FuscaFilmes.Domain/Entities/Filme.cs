@@ -1,7 +1,12 @@
-﻿namespace FuscaFilmes.Domain.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FuscaFilmes.Domain.Entities;
 
 public class Filme
 {
+    [Key]
+    [Column ("filme_id")]
     public int Id { get; set; }
     public string Titulo { get; set; }
     public int Ano { get; set; }
