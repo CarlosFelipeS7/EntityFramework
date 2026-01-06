@@ -6,11 +6,11 @@ namespace FuscaFilmes.Extensions
     {
         public static void DiretoresEndpoints(this IEndpointRouteBuilder app) //método de extensão do app para mapear os endpoints de diretores
         {
-            app.MapGet("/diretor", DiretoresHandlers.GetDiretores);
-            app.MapGet("/diretor/agregacao/{DiretorId}", DiretoresHandlers.GetDiretorById);
-            app.MapPost("/diretor", DiretoresHandlers.CreateDiretor);
-            app.MapPut("/diretor/{diretorId}", DiretoresHandlers.UpdateDiretor);
-            app.MapDelete("/diretor/{diretorId}", DiretoresHandlers.DeleteDiretor);
+            app.MapGet("/diretor", DiretoresHandlers.GetDiretoresAsync);
+            app.MapGet("/diretor/agregacao/{DiretorId}", DiretoresHandlers.GetDiretorByIdAsync);
+            app.MapPost("/diretor", DiretoresHandlers.CreateDiretorAsync);
+            app.MapPut("/diretor/{diretorId}", DiretoresHandlers.UpdateDiretorAsync);
+            app.MapDelete("/diretor/{diretorId}", DiretoresHandlers.DeleteDiretorAsync);
         }
 
 
@@ -18,9 +18,9 @@ namespace FuscaFilmes.Extensions
         {
             app.MapGet("/filmes", FilmesHandlers.GetFilmes);
             app.MapGet("/filmes/{id}", FilmesHandlers.GetFilmesById);
-            app.MapGet("/filmesEFFunction/byName/{titulo}", FilmesHandlers.GetFilmesByNameEFFunction);
-            app.MapGet("/filmesLinQ/byName/{titulo}", FilmesHandlers.GetFilmesByNameLINQ);
-            app.MapDelete("/filmes/{filmeId}", FilmesHandlers.DeleteFilme);
+            app.MapGet("/filmesEFFunction/byName/{titulo}", FilmesHandlers.GetFilmesByNameEFFunctionAsync);
+            app.MapGet("/filmesLinQ/byName/{titulo}", FilmesHandlers.GetFilmesByNameLINQAsync);
+            app.MapDelete("/filmes/{filmeId}", FilmesHandlers.DeleteFilmeAsync);
             app.MapPatch("/filmes", FilmesHandlers.UpdateFilme);
 
         }
